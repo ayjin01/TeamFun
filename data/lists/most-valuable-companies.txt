@@ -1,0 +1,106 @@
+title: World's most valuable companies
+source: CompaniesMarketCap, ranked by market value
+url: https://companiesmarketcap.com/
+asOf: 15 November 2026
+note: Market value means what all of a company's shares are worth. It moves daily, so this is a snapshot.
+
+Apple
+NVIDIA
+Microsoft
+Alphabet (Google) | Alphabet | Google
+Amazon
+TSMC | Taiwan Semiconductor | Taiwan Semiconductor Manufacturing Company
+SpaceX | Space X
+Saudi Aramco | Aramco
+Broadcom
+Meta Platforms (Facebook) | Meta | Meta Platforms | Facebook
+Tesla
+Eli Lilly | Lilly
+Berkshire Hathaway
+Walmart
+Samsung | Samsung Electronics
+JPMorgan Chase | JP Morgan | JPMorgan | Chase
+Micron Technology | Micron
+AMD | Advanced Micro Devices
+Visa
+Exxon Mobil | Exxon | ExxonMobil
+Johnson & Johnson | J&J | JnJ
+SK Hynix | Hynix
+ASML
+Mastercard
+AbbVie
+Costco
+China Construction Bank | CCB
+Tencent
+Chevron
+Coca-Cola | Coke | Coca Cola Company
+CXMT | ChangXin Memory Technologies | ChangXin Memory
+Palantir
+Roche
+Procter & Gamble | P&G | Procter and Gamble
+Oracle
+Agricultural Bank of China | AgBank
+Cisco
+UnitedHealth | United Health | UnitedHealth Group | United Healthcare
+Merck
+ICBC | Industrial and Commercial Bank of China
+Bank of America | BofA
+Home Depot | The Home Depot
+Bank of China
+General Electric | GE | GE Aerospace
+Intel
+Philip Morris International | Philip Morris | PMI
+HSBC
+Novartis
+Morgan Stanley
+Applied Materials
+AstraZeneca | Astra Zeneca
+Lam Research
+Shell
+Royal Bank of Canada | RBC
+Texas Instruments
+Caterpillar | CAT
+Nestlé
+SAP
+L'Oréal
+Kweichow Moutai | Moutai
+RTX | Raytheon
+Goldman Sachs | Goldman
+Palo Alto Networks | Palo Alto
+Thermo Fisher Scientific | Thermo Fisher
+Wells Fargo
+Netflix
+Amgen
+Toyota
+Arista Networks | Arista
+Mitsubishi UFJ Financial | MUFG | Mitsubishi UFJ
+Linde
+PetroChina
+Siemens
+Alibaba
+IBM
+CrowdStrike
+LVMH | Louis Vuitton | Moët Hennessy Louis Vuitton
+China Mobile
+Dell
+American Express | Amex
+GE Vernova
+Inditex | Zara
+Gilead Sciences | Gilead
+Walt Disney | Disney | The Walt Disney Company
+Citigroup | Citi | Citibank
+Arm Holdings | Arm
+MediaTek
+Toronto Dominion Bank | TD Bank | TD | Toronto-Dominion
+BHP Group | BHP
+Commonwealth Bank | Commonwealth Bank of Australia | CommBank
+Allianz SE | Allianz
+TotalEnergies | Total
+KLA
+PepsiCo | Pepsi
+Amphenol
+Analog Devices
+Verizon
+McDonald's | McDonalds
+Reliance Industries | Reliance
+Shopify

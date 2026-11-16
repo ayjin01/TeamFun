@@ -1,0 +1,105 @@
+title: Most populous countries
+source: United Nations World Population Prospects 2024, via Wikipedia
+url: https://en.wikipedia.org/wiki/List_of_countries_and_dependencies_by_population_(United_Nations)
+asOf: UN estimate for 1 July 2023
+
+India
+China | People's Republic of China | PRC
+United States | USA | US | America | United States of America
+Indonesia
+Pakistan
+Nigeria
+Brazil
+Bangladesh
+Russia | Russian Federation
+Mexico
+Ethiopia
+Japan
+Philippines | The Philippines
+Egypt
+DR Congo | Democratic Republic of the Congo | Democratic Republic of Congo | DRC | Congo-Kinshasa | Congo Kinshasa
+Vietnam | Viet Nam
+Iran
+Turkey | Türkiye | Turkiye
+Germany
+Thailand
+United Kingdom | UK | Great Britain | Britain
+Tanzania
+France
+South Africa
+Italy
+Kenya
+Myanmar | Burma
+Colombia
+South Korea | Korea | Republic of Korea
+Sudan
+Uganda
+Spain
+Algeria
+Argentina
+Iraq
+Afghanistan
+Yemen
+Canada
+Poland
+Ukraine
+Morocco
+Angola
+Uzbekistan
+Malaysia
+Peru
+Ghana
+Mozambique
+Saudi Arabia
+Madagascar
+Ivory Coast | Côte d'Ivoire | Cote d'Ivoire
+Nepal
+Cameroon
+Venezuela
+Australia
+North Korea | DPRK
+Niger
+Mali
+Syria
+Taiwan
+Burkina Faso
+Sri Lanka
+Malawi
+Zambia
+Kazakhstan
+Chile
+Chad
+Romania
+Somalia
+Guatemala
+Netherlands | The Netherlands | Holland
+Senegal
+Ecuador
+Cambodia
+Zimbabwe
+Guinea
+Benin
+Rwanda
+Burundi
+Bolivia
+Tunisia
+Belgium
+Haiti
+South Sudan
+Jordan
+Dominican Republic
+Cuba
+Czechia | Czech Republic
+Honduras
+United Arab Emirates | UAE | Emirates
+Sweden
+Portugal
+Tajikistan
+Papua New Guinea | PNG
+Azerbaijan
+Greece
+Hungary
+Togo
+Israel
+Austria
+Belarus

@@ -1,0 +1,261 @@
+# Closest Guess questions. One block per question, blank line between blocks.
+# See docs/instructions/add-closest-question.md for how to add more.
+# "checked" is when the number was last looked up.
+
+q: How many steps are there from the ground to the top of the Eiffel Tower?
+a: 1665
+unit: steps
+note: Visitors can only climb the first 674, up to the second floor.
+source: Eiffel Tower official website
+url: https://www.toureiffel.paris/en/faq/spot/how-can-you-walk-eiffel-tower-foot
+asOf: checked Nov 2026
+
+q: How long is the Great Wall of China, counting every section ever built?
+a: 21196
+unit: kilometres
+note: The official survey finished in 2012 and more than doubled the old estimate.
+source: China's State Administration of Cultural Heritage, reported by China Daily
+url: https://www.chinahighlights.com/greatwall/fact/great-wall-length.htm
+asOf: 2012 survey
+
+q: How many steps is it from the ground to the crown of the Statue of Liberty?
+a: 377
+unit: steps
+source: US National Park Service
+url: https://www.nps.gov/stli/learn/historyculture/statue-statistics.htm
+asOf: checked Nov 2026
+
+q: How tall is the Statue of Liberty, from the ground to the tip of the torch?
+a: 305
+unit: feet
+note: 305 feet 1 inch, about 93 metres. The statue itself is about half of that; the rest is pedestal.
+source: US National Park Service
+url: https://www.nps.gov/stli/learn/historyculture/statue-statistics.htm
+asOf: checked Nov 2026
+
+q: How long is the main span of the Golden Gate Bridge, between its two towers?
+a: 4200
+unit: feet
+note: That is 1,280 metres.
+source: Golden Gate Bridge District
+url: https://www.goldengate.org/bridge/history-research/statistics-data/design-construction-stats/
+asOf: checked Nov 2026
+
+q: How many episodes of Friends were made?
+a: 236
+unit: episodes
+note: Ten seasons, 1994 to 2004.
+source: Looper, "Friends: How Many Episodes Are There In Total?"
+url: https://www.looper.com/1366545/friends-how-many-episodes-total/
+asOf: checked Nov 2026
+
+q: How long is the film Avengers: Endgame?
+a: 181
+unit: minutes
+note: Just over three hours.
+source: KQED, "Blockbuster films keep getting longer"
+url: https://ww2.kqed.org/pop/111446/blockbuster-films-keep-getting-longer-how-and-why-did-we-get-here
+asOf: checked Nov 2026
+
+q: How many stations does the New York City Subway have?
+a: 472
+unit: stations
+note: This is the official count, more than any other metro system in the world.
+source: Metropolitan Transportation Authority (MTA)
+url: https://www.mta.info/node/7711
+asOf: checked Nov 2026
+
+q: How tall is the Burj Khalifa in Dubai, the world's tallest building?
+a: 828
+unit: metres
+source: Council on Tall Buildings, Skyscraper Center
+url: https://www.skyscrapercenter.com/building/burj-khalifa/3
+asOf: checked Nov 2026
+
+q: How many floors does the Burj Khalifa have?
+a: 163
+unit: floors
+source: Council on Tall Buildings, Skyscraper Center
+url: https://www.skyscrapercenter.com/building/burj-khalifa/3
+asOf: checked Nov 2026
+
+q: How high is Mount Everest, to the nearest metre?
+a: 8849
+unit: metres
+note: Nepal and China jointly announced 8,848.86 metres in December 2020.
+source: Al Jazeera, reporting the joint Nepal and China announcement
+url: https://www.aljazeera.com/news/2020/12/8/mt-everest-nepal-china-announce-revised-height-at-8848-metres
+asOf: Dec 2020
+
+q: How many people have walked on the Moon?
+a: 12
+unit: people
+note: All between 1969 and 1972, on six Apollo missions.
+source: Royal Museums Greenwich
+url: https://www.rmg.co.uk/stories/space-astronomy/how-many-people-have-walked-on-moon
+asOf: checked Nov 2026
+
+q: How many Oscars did the 1997 film Titanic win?
+a: 11
+unit: Oscars
+note: From 14 nominations. It tied the record set by Ben-Hur.
+source: Academy of Motion Picture Arts and Sciences
+url: https://www.oscars.org/oscars/ceremonies/1998/memorable-moments
+asOf: 1998 ceremony
+
+q: How much does the Hope Diamond weigh?
+a: 45.52
+unit: carats
+note: That is about 9 grams.
+source: Smithsonian Institution
+url: https://www.si.edu/spotlight/hope-diamond/history
+asOf: checked Nov 2026
+
+q: How tall is the Mona Lisa?
+a: 77
+unit: centimetres
+note: It is 77 cm tall and 53 cm wide, smaller than most people expect.
+source: Musée du Louvre
+url: https://boutique.louvre.fr/en/product/52026-the-mona-lisa-art-prints.html
+asOf: checked Nov 2026
+
+q: How many time zones does Russia have?
+a: 11
+unit: time zones
+source: timeanddate.com
+url: https://www.timeanddate.com/time/zone/russia
+asOf: checked Nov 2026
+
+q: How many letters are in the Hawaiian alphabet?
+a: 13
+unit: letters
+note: Five vowels and eight consonants, counting the ʻokina (the mark for a pause).
+source: Wikipedia, "Hawaiian alphabet"
+url: https://en.wikipedia.org/wiki/Hawaiian_alphabet
+asOf: checked Nov 2026
+
+q: How many strings does a concert harp have?
+a: 47
+unit: strings
+source: Philharmonia Orchestra
+url: https://philharmonia.co.uk/resources/instruments/harp/
+asOf: checked Nov 2026
+
+q: In what year was the first text message sent?
+a: 1992
+unit: year
+note: 3 December 1992. It said "Merry Christmas".
+source: History.com
+url: https://www.history.com/this-day-in-history/december-3/first-sms-text-message-sent
+asOf: checked Nov 2026
+
+q: How tall was the Great Pyramid of Giza when it was first built?
+a: 146.6
+unit: metres
+note: It has lost about 8 metres since, mostly its smooth outer casing.
+source: Wikipedia, "Great Pyramid of Giza"
+url: https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza
+asOf: checked Nov 2026
+
+q: How long is a marathon?
+a: 42195
+unit: metres
+note: 42.195 km, or 26 miles 385 yards. Fixed in 1921.
+source: World Athletics
+url: https://worldathletics.org/disciplines/road/marathon
+asOf: checked Nov 2026
+
+q: How many countries are members of the United Nations?
+a: 193
+unit: countries
+source: United Nations
+url: https://research.un.org/en/unmembers/intro
+asOf: checked Nov 2026
+
+q: How many bones are in an adult human body?
+a: 206
+unit: bones
+note: This is the textbook count. Babies are born with many more, which fuse together.
+source: BBC Science Focus
+url: https://www.sciencefocus.com/the-human-body/how-many-bones-do-people-have
+asOf: checked Nov 2026
+
+q: How many black keys are on a standard piano?
+a: 36
+unit: keys
+note: 88 keys in all: 52 white and 36 black.
+source: Classic FM
+url: https://www.classicfm.com/discover-music/instruments/piano/why-pianos-have-88-keys/
+asOf: checked Nov 2026
+
+q: How many elements are in the periodic table?
+a: 118
+unit: elements
+note: The last four were added in 2016.
+source: Wikipedia, "List of chemical elements" (IUPAC count)
+url: https://en.wikipedia.org/wiki/List_of_chemical_elements
+asOf: checked Nov 2026
+
+q: How far away is the Moon, on average?
+a: 384400
+unit: kilometres
+source: NASA Moon Fact Sheet
+url: https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html
+asOf: checked Nov 2026
+
+q: How fast does light travel in one second?
+a: 299792
+unit: kilometres
+note: Exactly 299,792,458 metres per second, by definition.
+source: Wikipedia, "Speed of light"
+url: https://en.wikipedia.org/wiki/Speed_of_light
+asOf: checked Nov 2026
+
+q: In what year was the first video uploaded to YouTube?
+a: 2005
+unit: year
+note: "Me at the zoo", 19 seconds long, uploaded on 23 April 2005.
+source: Wikipedia, "Me at the zoo"
+url: https://en.wikipedia.org/wiki/Me_at_the_zoo
+asOf: checked Nov 2026
+
+q: How many minutes are there in a week?
+a: 10080
+unit: minutes
+note: 7 days x 24 hours x 60 minutes.
+source: Arithmetic
+asOf: always
+
+q: How many seconds are there in a day?
+a: 86400
+unit: seconds
+note: 24 hours x 60 minutes x 60 seconds.
+source: Arithmetic
+asOf: always
+
+q: How many hours are there in a year that is not a leap year?
+a: 8760
+unit: hours
+note: 365 days x 24 hours.
+source: Arithmetic
+asOf: always
+
+q: How many dots are there on a full set of dominoes, from double blank to double six?
+a: 168
+unit: dots
+note: 28 tiles. Each number from 0 to 6 appears 8 times, and 8 x 21 = 168.
+source: Arithmetic
+asOf: always
+
+q: How many squares of every size are there on a chessboard, from the 64 small ones up to the whole board?
+a: 204
+unit: squares
+note: 64 + 49 + 36 + 25 + 16 + 9 + 4 + 1.
+source: Arithmetic
+asOf: always
+
+q: What do you get if you add up every whole number from 1 to 100?
+a: 5050
+note: Fifty pairs that each add up to 101.
+source: Arithmetic
+asOf: always
