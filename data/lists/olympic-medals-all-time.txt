@@ -1,0 +1,106 @@
+title: Most Olympic medals of all time
+source: All-time Olympic Games medal table, Wikipedia
+url: https://en.wikipedia.org/wiki/All-time_Olympic_Games_medal_table
+asOf: Through the 2026 Winter Olympics
+note: Summer and Winter Games combined, ranked by total medals (ties split by golds). Teams that no longer exist count separately, so think historically. Liechtenstein and Uruguay are level on both counts.
+
+United States | USA | US | America
+Soviet Union | USSR
+Great Britain | United Kingdom | UK | Britain | Team GB
+France
+Germany
+Italy
+China
+Sweden
+Japan
+Australia
+Norway
+Canada
+Hungary
+Russia | Russian Federation
+Netherlands | The Netherlands | Holland
+East Germany | GDR | German Democratic Republic
+Finland
+South Korea | Korea | Republic of Korea
+Switzerland
+Austria
+Poland
+Romania
+Cuba
+West Germany | FRG | Federal Republic of Germany
+Bulgaria
+Denmark
+Spain
+Belgium
+Brazil
+Czechoslovakia
+New Zealand
+Ukraine
+United Team of Germany | Unified Team of Germany
+Unified Team | CIS | Commonwealth of Independent States
+Greece
+Kenya
+Turkey | Türkiye | Turkiye
+Czech Republic | Czechia
+Belarus
+ROC | Russian Olympic Committee
+South Africa
+Jamaica
+Iran
+Yugoslavia
+Kazakhstan
+Argentina
+Mexico
+North Korea | DPRK
+Ethiopia
+Croatia
+Slovenia
+Azerbaijan
+Uzbekistan
+Georgia
+Estonia
+Slovakia
+Chinese Taipei | Taiwan
+Ireland
+Thailand
+India
+Egypt
+Indonesia
+Colombia
+Latvia
+Portugal
+Mongolia
+Lithuania
+Serbia
+Nigeria
+Morocco
+Armenia
+Algeria
+Israel
+Trinidad and Tobago | Trinidad
+Venezuela
+Tunisia
+Philippines | The Philippines
+Olympic Athletes from Russia | OAR
+Bahamas | The Bahamas
+Dominican Republic
+Chile
+Malaysia
+Uganda
+Hong Kong
+Kyrgyzstan
+Australasia
+Puerto Rico
+Pakistan
+Ecuador
+Mixed team | Mixed teams
+Liechtenstein
+Uruguay
+Moldova
+Qatar
+Serbia and Montenegro
+Bahrain
+Zimbabwe
+Russian Empire
+Tajikistan
+Cameroon

@@ -1,0 +1,268 @@
+<!doctype html>
+<meta charset="utf-8" />
+<title>running</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #000; }
+  iframe { border: 0; width: 100vw; height: 100vh; display: block; }
+  pre { position: absolute; left: -9999px; }
+</style>
+<iframe id="f"></iframe>
+<pre id="log"></pre>
+<script type="module">
+  // Temporary end-to-end check. Drives the real pages inside an iframe.
+  import { parseList, parseQuestions, parsePuzzles } from '../js/lists.js';
+  const shot = new URLSearchParams(location.search).get('shot'); // stop at this point for a screenshot
+  const frame = document.getElementById('f');
+  const log = (m) => (document.getElementById('log').textContent += m + '\n');
+  const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+  const doc = () => frame.contentDocument;
+  async function until(fn, what) {
+    for (let i = 0; i < 100; i++) {
+      try { const v = fn(); if (v) return v; } catch {}
+      await sleep(50);
+    }
+    throw new Error('timed out waiting for ' + what);
+  }
+  const open = async (url, sel) => { frame.src = '../' + url; await sleep(100); return until(() => doc().querySelector(sel), sel + ' on ' + url); };
+  const btn = (text) => [...doc().querySelectorAll('button, a.btn')].find((b) => b.textContent.trim() === text);
+  const check = (ok, label) => log((ok ? 'PASS ' : 'FAIL ') + label);
+  const stop = (name) => { if (shot === name) { document.title = 'DONE'; throw 'stop'; } };
+
+  try {
+    if (!['localhost', '127.0.0.1'].includes(location.hostname)) throw new Error('This check only runs on localhost');
+    Object.keys(localStorage).filter((k) => k.startsWith('teamfun.')).forEach((k) => localStorage.removeItem(k));
+    localStorage.setItem('teamfun.players', JSON.stringify([
+      { id: 'p1', name: 'Ana' }, { id: 'p2', name: 'Ben' }, { id: 'p3', name: 'Chidi' }, { id: 'p4', name: 'Dee' },
+    ]));
+
+    // a browser that already has the first version's seven cards saved
+    localStorage.setItem('teamfun.games', JSON.stringify(
+      ['top100', 'krillion', 'noillurk', 'crosstunes', 'spotle', 'connections', 'contexto'].map((id) => (
+        { id, name: id === 'krillion' ? 'Krillion' : id, url: id === 'top100' ? 'top100.html' : id === 'noillurk' ? '' : 'https://example.com/', kind: 'collab', builtin: id === 'top100', inWheel: true }
+      )),
+    ));
+
+    // --- hub ---
+    await open('index.html', '.card');
+    check(doc().querySelectorAll('article.card').length === 12, 'hub adds the 5 new cards to the 7 already saved');
+    check(['Bonk', 'GeoGuessr', 'Gartic Phone', 'Closest Guess', 'Guess the Link'].every((n) => [...doc().querySelectorAll('article.card h3')].some((h) => h.textContent === n)), 'Bonk, GeoGuessr, Gartic Phone and both new games have cards');
+    check(doc().querySelectorAll('.wheel-spin path').length === 12, 'wheel has 12 slices');
+    check(!!btn('Add link'), 'games without a link offer "Add link"');
+    doc().getElementById('spin-btn').click();
+    await until(() => doc().querySelector('.pick'), 'a pick after spinning');
+    check(doc().querySelectorAll('.pick').length === 1, 'spin picks one game');
+    // log a result for Krillion
+    [...doc().querySelectorAll('article.card')].find((c) => c.querySelector('h3').textContent === 'Krillion')
+      .querySelector('.card-actions button').click();
+    await until(() => doc().querySelector('dialog[open]'), 'log dialog');
+    doc().querySelector('dialog input[value="solved"]').click();
+    doc().querySelector('dialog input.input:not([type=date])').value = '6,200 m';
+    doc().querySelector('dialog button[type=submit]').click();
+    await until(() => doc().querySelector('.card .chip-good'), 'solved chip');
+    check(doc().querySelector('.card .chip-good').textContent.includes('Solved'), 'logged result shows on the card');
+    stop('hub');
+
+    // --- top 100 setup ---
+    await open('top100.html', '.category-title');
+    check(doc().querySelector('.category-title').textContent.length > 3, 'setup shows a category');
+    const before = doc().querySelector('.category-title').textContent;
+    btn('Pick a different one').click();
+    await until(() => doc().querySelector('.category-title').textContent !== before, 're-rolled category');
+    check(true, 're-roll gives a different category');
+    btn('Start round').click();
+    await sleep(100);
+    check(!doc().querySelector('.board'), 'cannot start with nobody ticked');
+    const boxes = [...doc().querySelectorAll('.choice input[type=checkbox]')];
+    boxes[0].click(); boxes[1].click(); boxes[2].click();
+    stop('setup');
+    btn('Start round').click();
+    await until(() => doc().querySelector('.board'), 'board');
+    check(doc().querySelectorAll('.slot').length === 100, 'board has 100 slots');
+
+    // --- play ---
+    const round0 = JSON.parse(localStorage.getItem('teamfun.round'));
+    const list = parseList(await (await fetch(`../data/lists/${round0.listSlug}.txt`)).text());
+    const guess = async (text) => {
+      const input = await until(() => doc().querySelector('.guess-input'), 'guess input');
+      input.value = text;
+      doc().querySelector('.guess-form').requestSubmit();
+      await sleep(60);
+    };
+    const total = () => [...doc().querySelectorAll('.player-score')].reduce((s, n) => s + Number(n.textContent), 0);
+    await guess(list.items[89].answer.toUpperCase());
+    check(total() === 90, 'number 90 scores 90');
+    check(doc().querySelectorAll('.slot.is-found').length === 1, 'its slot flips open');
+    await guess(list.items[89].aliases[0] ?? list.items[89].answer);
+    check(total() === 90 && doc().querySelector('.last-duplicate'), 'a repeat scores nothing');
+    await guess('zzqqzz');
+    check(total() === 90 && doc().querySelector('.last-wrong'), 'a wrong guess scores nothing');
+    await guess(list.items[0].answer);
+    check(total() === 91, 'number 1 scores 1');
+    // refresh mid-round
+    await open('top100.html', '.board');
+    check(total() === 91 && doc().querySelectorAll('.slot.is-found').length === 2, 'round survives a refresh');
+    await guess(list.items[49].answer);
+    stop('game');
+    for (const i of [98, 97, 96, 95]) await guess(list.items[i].answer);
+    await until(() => doc().querySelector('.winner'), 'winner bar');
+    check(/wins!|Shared win/.test(doc().querySelector('.winner h2').textContent), 'winner announced: ' + doc().querySelector('.winner h2').textContent);
+    check(doc().querySelectorAll('.slot.is-missed').length === 93, 'missed answers are revealed');
+    await sleep(200);
+    const plays = JSON.parse(localStorage.getItem('teamfun.plays'));
+    check(plays.length === 2 && plays[1].gameId === 'top100' && plays[1].winners.length >= 1, 'result saved to the tracker once');
+    stop('end');
+
+    // --- abandon ---
+    btn('Play another').click();
+    await until(() => doc().querySelector('.category-title'), 'setup again');
+    btn('Start round').click();
+    await until(() => doc().querySelector('.board'), 'board again');
+    await guess(list.items[5].answer);
+    btn('Abandon round').click();
+    await until(() => doc().querySelector('dialog[open]'), 'confirm dialog');
+    [...doc().querySelectorAll('dialog button')].find((b) => b.textContent === 'Abandon').click();
+    await until(() => doc().querySelector('.category-title'), 'setup after abandon');
+    check(JSON.parse(localStorage.getItem('teamfun.plays')).length === 2 && !localStorage.getItem('teamfun.round'), 'abandoned round is not saved');
+
+    // --- tracker ---
+    await open('tracker.html', '.entry');
+    check(doc().querySelectorAll('.entry').length === 2, 'tracker lists both results');
+    check(doc().querySelector('.tile-value').textContent === '1', 'streak is 1 day');
+    check([...doc().querySelectorAll('.win-count')].some((n) => n.textContent === '1'), 'wins tally has a win');
+    stop('tracker');
+    doc().querySelector('.entry button').click();
+    await until(() => doc().querySelector('dialog[open]'), 'edit dialog');
+    [...doc().querySelectorAll('dialog button')].find((b) => b.textContent === 'Delete entry').click();
+    (await until(() => [...doc().querySelectorAll('dialog[open] button')].find((b) => b.textContent === 'Delete'), 'delete confirm')).click();
+    await until(() => doc().querySelectorAll('.entry').length === 1, 'entry removed');
+    check(true, 'an entry can be deleted');
+
+    // --- closest guess ---
+    const scoreOf = (name) => Number([...doc().querySelectorAll('.player')].find((n) => n.querySelector('.player-name').textContent === name).querySelector('.player-score').textContent);
+    await open('closest.html', '.category-title');
+    check(doc().querySelectorAll('.choice input:checked').length === 3, 'closest: remembers who played last');
+    stop('closest-setup');
+    btn('Start round').click();
+    await until(() => doc().querySelector('.quiz-question'), 'first question');
+    const questions = parseQuestions(await (await fetch('../data/closest/questions.txt')).text());
+    let cr = JSON.parse(localStorage.getItem('teamfun.round.closest'));
+    const star = cr.players[0].name;
+    check(cr.questionIds.length === 8 && cr.spareIds.length === 3, 'closest: 8 questions plus 3 held back for sudden death');
+    const lockIn = async (text) => {
+      const input = await until(() => doc().querySelector('.guess-input'), 'number input');
+      input.value = text;
+      doc().querySelector('.guess-form').requestSubmit();
+      await sleep(40);
+    };
+    const whoIsUp = () => doc().querySelector('.guess-prompt').textContent.split(',')[0];
+    const first = whoIsUp();
+    await lockIn('lots');
+    check(whoIsUp() === first && doc().querySelectorAll('.lock.is-in').length === 0, 'closest: words are not accepted as a guess');
+    for (let q = 0; q < 8; q++) {
+      const answer = questions.find((x) => x.id === cr.questionIds[q]).answer;
+      for (let i = 0; i < 3; i++) {
+        const name = whoIsUp();
+        if (q === 0 && i === 1) {
+          check(doc().querySelectorAll('.lock.is-in').length === 1 && !doc().body.textContent.includes(String(answer + 7)), 'closest: a locked-in guess stays hidden');
+          check(getComputedStyle(doc().querySelector('.guess-input')).webkitTextSecurity === 'disc', 'closest: typing shows as dots');
+        }
+        await lockIn(String(name === star ? answer : answer + (i + 1) * 7));
+      }
+      if (q === 0) { check(!doc().querySelector('.quiz-answer') && !!btn('Reveal the answer'), 'closest: answer waits for the Reveal button'); stop('closest-locked'); }
+      btn('Reveal the answer').click();
+      await until(() => doc().querySelector('.quiz-answer'), 'answer');
+      if (q === 0) {
+        check(scoreOf(star) === 3, 'closest: an exact guess scores 2 + 1 bonus');
+        check(doc().querySelectorAll('.numline-guess').length === 3 && doc().querySelectorAll('.closest-list li').length === 3, 'closest: reveal shows every guess');
+        check([...doc().querySelectorAll('.player-score')].reduce((t, n) => t + Number(n.textContent), 0) === 4, 'closest: second closest scores 1, third scores 0');
+        stop('closest-reveal');
+        await open('closest.html', '.quiz-answer');
+        check(scoreOf(star) === 3, 'closest: round survives a refresh');
+      }
+      if (q === 7) check(!!btn('See the result'), 'closest: last question offers the result');
+      (btn('Next question') ?? btn('See the result')).click();
+      await sleep(60);
+    }
+    await until(() => doc().querySelector('.winner'), 'closest winner');
+    check(doc().querySelector('.winner h2').textContent === `${star} wins!` && scoreOf(star) === 24, 'closest: winner announced with 24 points');
+    await sleep(200);
+    let saved = JSON.parse(localStorage.getItem('teamfun.plays'));
+    check(saved.length === 2 && saved[1].gameId === 'closest' && saved[1].details.questionIds.length === 8, 'closest: result saved to the tracker once');
+    stop('closest-end');
+    btn('Play another').click();
+    await until(() => doc().querySelector('.category-title'), 'closest setup again');
+    btn('Start round').click();
+    await until(() => doc().querySelector('.quiz-question'), 'second round');
+    const second = JSON.parse(localStorage.getItem('teamfun.round.closest'));
+    check(second.questionIds.every((id) => !cr.questionIds.includes(id)), 'closest: next round uses fresh questions');
+    btn('Abandon round').click();
+    (await until(() => [...doc().querySelectorAll('dialog[open] button')].find((b) => b.textContent === 'Abandon'), 'abandon')).click();
+    await until(() => doc().querySelector('.category-title'), 'setup after abandon');
+    check(!localStorage.getItem('teamfun.round.closest') && JSON.parse(localStorage.getItem('teamfun.plays')).length === 2, 'closest: abandoned round is not saved');
+
+    // --- guess the link (the team plays together) ---
+    await open('link.html', '.category-title');
+    check(!doc().querySelector('.choice'), 'link: no player picking, the whole team plays');
+    stop('link-setup');
+    btn('Start round').click();
+    await until(() => doc().querySelector('.clues'), 'clues');
+    const puzzles = parsePuzzles(await (await fetch('../data/link/puzzles.txt')).text());
+    const lr = JSON.parse(localStorage.getItem('teamfun.round.link'));
+    const teamScore = () => Number(doc().querySelector('.team-score-value').textContent);
+    const say = async (text) => {
+      const input = await until(() => doc().querySelector('.guess-input'), 'link input');
+      input.value = text;
+      doc().querySelector('.guess-form').requestSubmit();
+      await sleep(40);
+    };
+    const nextPuzzle = async () => { (btn('Next puzzle') ?? btn('See the result')).click(); await sleep(60); };
+    check(lr.puzzleIds.length === 8 && doc().querySelectorAll('.puzzle-log li').length === 8, 'link: a round is 8 puzzles');
+    check(doc().querySelectorAll('.clue').length === 4 && doc().querySelectorAll('.clue.is-shown').length === 2, 'link: starts with two clues of four showing');
+    check(doc().querySelector('.clue.is-shown .clue-text').textContent === puzzles.find((p) => p.id === lr.puzzleIds[0]).clues[0], 'link: the hardest clue comes first');
+    stop('link-play');
+    await say(puzzles.find((p) => p.id === lr.puzzleIds[0]).accept[0].toUpperCase());
+    check(teamScore() === 5 && !!doc().querySelector('.quiz-answer') && doc().querySelectorAll('.puzzle-log .is-solved').length === 1, 'link: solving with two clues scores 5 for the team');
+    stop('link-solved');
+    await nextPuzzle();
+    // second puzzle: one wrong guess, then give up
+    await say('zzqqzz');
+    check(doc().querySelectorAll('.clue.is-shown').length === 3 && !!doc().querySelector('.link-status.is-wrong'), 'link: a wrong guess reveals the next clue');
+    await open('link.html', '.clues');
+    check(doc().querySelectorAll('.clue.is-shown').length === 3 && teamScore() === 5, 'link: round survives a refresh');
+    btn('Next clue').click(); await sleep(40);
+    check(doc().querySelectorAll('.clue.is-shown').length === 4 && !btn('Next clue') && !!btn('Give up'), 'link: after four clues you can only guess or give up');
+    btn('Give up').click(); await sleep(40);
+    check(teamScore() === 5 && !!doc().querySelector('.allow-box') && doc().querySelectorAll('.puzzle-log .is-missed').length === 1, 'link: giving up scores nothing');
+    stop('link-allow');
+    [...doc().querySelectorAll('.allow-row button')][0].click(); await sleep(40);
+    check(teamScore() === 10 && !doc().querySelector('.allow-box'), 'link: "We\'ll allow it" gives the points for that guess');
+    await nextPuzzle();
+    // the rest: solved on the last clue (1 point each)
+    for (let i = 2; i < 8; i++) {
+      for (let c = 0; c < 2; c++) { btn('Next clue').click(); await sleep(30); }
+      await say(puzzles.find((p) => p.id === lr.puzzleIds[i]).accept[0]);
+      if (i === 7) check(!!btn('See the result'), 'link: last puzzle offers the result');
+      await nextPuzzle();
+    }
+    await until(() => doc().querySelector('.winner'), 'link result');
+    check(doc().querySelector('.winner h2').textContent === '16 of 40', 'link: final team score shown (16 of 40)');
+    await sleep(200);
+    saved = JSON.parse(localStorage.getItem('teamfun.plays'));
+    check(saved.length === 3 && saved[2].gameId === 'link' && saved[2].winners.length === 0 && saved[2].score === '16 of 40 points', 'link: team result saved to the tracker once, with no winner');
+    stop('link-end');
+    btn('Play another').click();
+    await until(() => doc().querySelector('.category-title'), 'link setup again');
+    check(doc().body.textContent.includes('Team best: 16 of 40'), 'link: setup shows the team best to beat');
+
+    // --- everything together ---
+    await open('tracker.html', '.entry');
+    check(doc().querySelectorAll('.entry').length === 3, 'tracker lists the new games\' results');
+    await open('index.html', '.card');
+    check(doc().querySelectorAll('.card .chip-good').length >= 2, 'hub cards show today\'s results');
+    check([...doc().querySelectorAll('article.card')].find((c) => c.querySelector('h3').textContent === 'Guess the Link').querySelector('.chip-team'), 'Guess the Link card is marked Team');
+    stop('hub-end');
+  } catch (err) {
+    if (err !== 'stop') log('ERROR ' + (err.stack || err));
+  }
+  document.title = 'DONE';
+</script>

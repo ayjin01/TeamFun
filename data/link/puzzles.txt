@@ -1,0 +1,200 @@
+# Guess the Link puzzles. One block per puzzle, blank line between blocks.
+# clues: hardest first, separated by ;  (the game shows the first two together)
+# accept: key words that count as a right answer, separated by |
+# See docs/instructions/add-link-puzzle.md for how to add more.
+#
+# These are meant to be hard: the link is usually about the words themselves
+# (hidden words, spelling, sound) or a second meaning, not a simple category.
+
+# ---- hidden inside the word ----
+
+link: Each one hides a number
+accept: number | numbers | digit | digits
+clues: Bone ; Often ; Network ; Weight
+note: b-ONE, of-TEN, ne-TWO-rk, w-EIGHT.
+
+link: Each one hides a part of the body
+accept: body | body part | body parts
+clues: Charm ; Slipper ; Beard ; Chinese
+note: ch-ARM, s-LIP-per, b-EAR-d, CHIN-ese.
+
+link: Each one hides an animal
+accept: animal | animals | creature | creatures
+clues: Plantain ; Crowd ; Scatter ; Beech
+note: pl-ANT-ain, CROW-d, s-CAT-ter, BEE-ch.
+
+link: Each one hides a colour
+accept: colour | colours | color | colors
+clues: Stealth ; Credit ; Stand ; Jaded
+note: s-TEAL-th, c-RED-it, s-TAN-d, JADE-d.
+
+link: Each one hides a metal
+accept: metal | metals
+clues: Environment ; Misleading ; Stink ; Marigold
+note: env-IRON-ment, mis-LEAD-ing, s-TIN-k, mari-GOLD.
+
+# ---- how the word is spelled or sounds ----
+
+link: Anagrams of countries
+accept: anagram | anagrams | country | countries
+clues: Regalia ; Serial ; Chain ; Pure
+note: Algeria, Israel, China, Peru.
+
+link: Spelled using only Roman numerals
+accept: roman | numeral | numerals
+clues: Vivid ; Mild ; Civil ; Mix
+note: Every letter is one of I, V, X, L, C, D or M.
+
+link: Typed using only the top row of a keyboard
+accept: keyboard | top row | qwerty | typed | typing
+clues: Repertoire ; Proprietor ; Pottery ; Typewriter
+note: Every letter comes from Q W E R T Y U I O P.
+
+link: Their letters are in alphabetical order
+accept: alphabetical | alphabet | alphabetically
+clues: Biopsy ; Almost ; Ghost ; Begin
+
+link: No vowels (A, E, I, O or U)
+accept: vowel | vowels
+clues: Lynx ; Crypt ; Myth ; Rhythm
+
+link: Palindromes: the same backwards
+accept: palindrome | palindromes | backwards | backward | both ways
+clues: Civic ; Kayak ; Hannah ; Racecar
+
+link: They start with a silent letter
+accept: silent
+clues: Psalm ; Gnome ; Wrist ; Knight
+
+link: They sound like letters of the alphabet
+accept: letter | letters | alphabet
+clues: Queue ; Are ; Why ; Tea
+note: Q, R, Y, T.
+
+link: They sound like numbers
+accept: number | numbers
+clues: Won ; Ate ; For ; Too
+note: One, eight, four, two.
+
+# ---- a missing word ----
+
+link: Words that go before "moon"
+accept: moon
+clues: Blue ; Honey ; Harvest ; Full
+
+link: Words that go before "board"
+accept: board | boards
+clues: Card ; Dash ; Skate ; Chess
+
+link: Words that follow "black"
+accept: black
+clues: Mail ; Smith ; Jack ; Berry
+note: Blackmail, blacksmith, blackjack, blackberry.
+
+link: Words that go before "bank"
+accept: bank | banks
+clues: Blood ; River ; Food ; Piggy
+
+link: Words that follow "fire"
+accept: fire
+clues: Fly ; Works ; Place ; Fighter
+note: Firefly, fireworks, fireplace, firefighter.
+
+link: The first half of a famous pair
+accept: pair | pairs | partner | partners | other half | missing half
+clues: Rock ; Bread ; Fish ; Salt
+note: Rock and roll, bread and butter, fish and chips, salt and pepper.
+
+# ---- one word, several meanings ----
+
+link: Things with keys
+accept: key | keys
+clues: Florida ; A map ; A piano ; A keyboard
+note: The Florida Keys, a map key, piano keys and keyboard keys.
+
+link: Things with rings
+accept: ring | rings
+clues: Saturn ; A tree trunk ; A boxing match ; A wedding
+
+link: Things with wings
+accept: wing | wings
+clues: A hospital ; A theatre stage ; An aeroplane ; A bird
+
+link: Things with an eye
+accept: eye | eyes
+clues: A potato ; A needle ; A hurricane ; London
+note: The London Eye is the big wheel on the Thames.
+
+link: Things with a bridge
+accept: bridge | bridges
+clues: A song ; A ship ; A violin ; A nose
+
+link: Things with scales
+accept: scale | scales
+clues: A map ; A musician ; A bathroom ; A fish
+
+link: Things with a crown
+accept: crown | crowns
+clues: A tree ; A tooth ; A pineapple ; A king
+
+link: Things with a trunk
+accept: trunk | trunks
+clues: A swimmer ; A car ; A tree ; An elephant
+
+link: Things with a pitch
+accept: pitch | pitches
+clues: A roof ; A salesperson ; A singer ; A football ground
+
+link: Things with a jack
+accept: jack | jacks
+clues: A game of bowls ; A pack of cards ; A headphone socket ; The Union flag
+note: In bowls, the small target ball is the jack.
+
+link: Things with a spine
+accept: spine | spines
+clues: A book ; A cactus ; A hedgehog ; A person
+
+link: Things with a cap
+accept: cap | caps
+clues: A mushroom ; A knee ; A pen ; A bottle
+
+link: Things you can cast
+accept: cast | casting
+clues: A shadow ; A vote ; A spell ; A fishing line
+
+link: Things you can draw
+accept: draw | drawn | drawing
+clues: A bath ; A conclusion ; The curtains ; A picture
+
+link: Things you can run
+accept: run | running
+clues: A temperature ; A risk ; A business ; A marathon
+
+link: Things you can pick
+accept: pick | picked | picking
+clues: A lock ; A fight ; A guitar ; Your nose
+
+link: Things you can break
+accept: break | broken | breaking
+clues: The ice ; A record ; A promise ; A leg
+
+link: They are all called Mercury
+accept: mercury
+clues: A Roman messenger god ; A liquid metal ; The lead singer of Queen ; The planet nearest the Sun
+
+link: They are all called Amazon
+accept: amazon | amazons
+clues: A tribe of warrior women in Greek myth ; The world's biggest rainforest ; A river in South America ; An online shop
+
+link: They are also countries
+accept: country | countries
+clues: Chad ; Jordan ; Georgia ; Turkey
+
+link: They are also cars
+accept: car | cars
+clues: Focus ; Polo ; Beetle ; Mustang
+note: Ford Focus, Volkswagen Polo, Volkswagen Beetle, Ford Mustang.
+
+link: Units of measurement named after scientists
+accept: unit | units | measurement | measurements | scientist | scientists
+clues: Hertz ; Kelvin ; Watt ; Newton

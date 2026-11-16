@@ -1,0 +1,106 @@
+title: Highest-grossing films of all time (worldwide)
+source: Box Office Mojo, worldwide lifetime gross
+url: https://www.boxofficemojo.com/chart/ww_top_lifetime_gross/
+asOf: 15 November 2026
+note: Not adjusted for inflation. For sequels, say which one.
+
+Avengers: Endgame :: 2019 | Endgame
+Avatar :: 2009
+Spider-Man: Brand New Day :: 2026 | Brand New Day | Spiderman Brand New Day
+Avatar: The Way of Water :: 2022 | The Way of Water | Avatar 2
+Ne Zha 2 :: 2025 | Nezha 2
+Titanic :: 1997
+Star Wars: Episode VII - The Force Awakens :: 2015 | The Force Awakens | Star Wars The Force Awakens | Star Wars Episode VII | Star Wars Episode 7 | Star Wars 7
+Avengers: Infinity War :: 2018 | Infinity War
+Spider-Man: No Way Home :: 2021 | No Way Home | Spiderman No Way Home
+Zootopia 2 :: 2025 | Zootropolis 2
+The Odyssey :: 2026 | Odyssey
+Inside Out 2 :: 2024
+Jurassic World :: 2015
+The Lion King (2019 remake) :: 2019 | The Lion King 2019 | Lion King 2019 | Lion King remake | The Lion King remake | Lion King live action
+The Avengers :: 2012 | Avengers | Avengers Assemble
+Furious 7 :: 2015 | Fast and Furious 7 | Fast 7
+Top Gun: Maverick :: 2022 | Top Gun Maverick | Maverick | Top Gun 2
+Avatar: Fire and Ash :: 2025 | Fire and Ash | Avatar 3
+Frozen II :: 2019 | Frozen 2
+Barbie :: 2023
+Avengers: Age of Ultron :: 2015 | Age of Ultron
+The Super Mario Bros. Movie :: 2023 | Super Mario Bros Movie | Super Mario Bros | Mario Movie | Super Mario Movie
+Black Panther :: 2018
+Harry Potter and the Deathly Hallows: Part 2 :: 2011 | Deathly Hallows Part 2 | Harry Potter 8 | Harry Potter and the Deathly Hallows 2 | Deathly Hallows 2
+Deadpool & Wolverine :: 2024 | Deadpool 3
+Star Wars: Episode VIII - The Last Jedi :: 2017 | The Last Jedi | Star Wars The Last Jedi | Star Wars Episode VIII | Star Wars Episode 8 | Star Wars 8
+Frozen :: 2013
+Jurassic World: Fallen Kingdom :: 2018 | Fallen Kingdom | Jurassic World 2
+Beauty and the Beast :: 2017
+Incredibles 2 :: 2018 | The Incredibles 2
+The Fate of the Furious :: 2017 | Fate of the Furious | Fast and Furious 8 | Fast 8 | F8
+Iron Man 3 :: 2013 | Ironman 3
+Minions :: 2015
+Captain America: Civil War :: 2016 | Civil War
+Aquaman :: 2018
+Toy Story 5 :: 2026
+The Lord of the Rings: The Return of the King :: 2003 | The Return of the King | Return of the King | Lord of the Rings Return of the King | Lord of the Rings 3
+Spider-Man: Far from Home :: 2019 | Far from Home | Spiderman Far from Home
+Captain Marvel :: 2019
+Transformers: Dark of the Moon :: 2011 | Dark of the Moon | Transformers 3
+Skyfall :: 2012
+Transformers: Age of Extinction :: 2014 | Age of Extinction | Transformers 4
+Jurassic Park :: 1993
+The Dark Knight Rises :: 2012 | Dark Knight Rises
+Joker :: 2019
+Star Wars: Episode IX - The Rise of Skywalker :: 2019 | The Rise of Skywalker | Rise of Skywalker | Star Wars The Rise of Skywalker | Star Wars Episode IX | Star Wars Episode 9 | Star Wars 9
+Toy Story 4 :: 2019
+Toy Story 3 :: 2010
+Pirates of the Caribbean: Dead Man's Chest :: 2006 | Dead Man's Chest | Pirates of the Caribbean 2
+Moana 2 :: 2024
+Rogue One: A Star Wars Story :: 2016 | Rogue One
+Aladdin :: 2019
+Pirates of the Caribbean: On Stranger Tides :: 2011 | On Stranger Tides | Pirates of the Caribbean 4
+Star Wars: Episode I - The Phantom Menace :: 1999 | The Phantom Menace | Phantom Menace | Star Wars The Phantom Menace | Star Wars Episode I | Star Wars Episode 1 | Star Wars 1
+Lilo & Stitch :: 2025
+Despicable Me 3 :: 2017
+Harry Potter and the Philosopher's Stone :: 2001 | Harry Potter and the Sorcerer's Stone | Philosopher's Stone | Sorcerer's Stone | Harry Potter 1
+Finding Dory :: 2016
+Michael :: 2026
+Zootopia :: 2016 | Zootropolis
+Alice in Wonderland :: 2010
+The Hobbit: An Unexpected Journey :: 2012 | An Unexpected Journey | Unexpected Journey | The Hobbit 1 | Hobbit 1
+The Super Mario Galaxy Movie :: 2026 | Super Mario Galaxy Movie | Super Mario Galaxy | Mario Galaxy Movie
+The Dark Knight :: 2008 | Dark Knight
+Jurassic World: Dominion :: 2022 | Jurassic World Dominion | Dominion | Jurassic World 3
+The Lion King (1994) :: 1994 | The Lion King | Lion King | The Lion King 1994 | Lion King 1994 | Lion King original
+Oppenheimer :: 2023
+Despicable Me 4 :: 2024
+Despicable Me 2 :: 2013
+The Jungle Book :: 2016 | Jungle Book
+The Hobbit: The Battle of the Five Armies :: 2014 | The Battle of the Five Armies | Battle of the Five Armies | The Hobbit 3 | Hobbit 3
+Jumanji: Welcome to the Jungle :: 2017 | Jumanji | Welcome to the Jungle
+Pirates of the Caribbean: At World's End :: 2007 | At World's End | Pirates of the Caribbean 3
+Harry Potter and the Deathly Hallows: Part 1 :: 2010 | Deathly Hallows Part 1 | Harry Potter 7 | Harry Potter and the Deathly Hallows 1 | Deathly Hallows 1
+A Minecraft Movie :: 2025 | Minecraft Movie | Minecraft | The Minecraft Movie
+The Hobbit: The Desolation of Smaug :: 2013 | The Desolation of Smaug | Desolation of Smaug | The Hobbit 2 | Hobbit 2
+Doctor Strange in the Multiverse of Madness :: 2022 | Multiverse of Madness | Doctor Strange 2 | Dr Strange in the Multiverse of Madness | Dr Strange 2
+The Lord of the Rings: The Two Towers :: 2002 | The Two Towers | Two Towers | Lord of the Rings The Two Towers | Lord of the Rings 2
+Finding Nemo :: 2003
+Harry Potter and the Half-Blood Prince :: 2009 | Half-Blood Prince | Half Blood Prince | Harry Potter 6
+Minions: The Rise of Gru :: 2022 | The Rise of Gru | Rise of Gru | Minions 2
+Harry Potter and the Order of the Phoenix :: 2007 | Order of the Phoenix | Harry Potter 5
+Shrek 2 :: 2004
+Bohemian Rhapsody :: 2018
+No Time to Die :: 2021
+Spectre :: 2015
+Star Wars: Episode III - Revenge of the Sith :: 2005 | Revenge of the Sith | Star Wars Revenge of the Sith | Star Wars Episode III | Star Wars Episode 3 | Star Wars 3
+The Battle at Lake Changjin :: 2021 | Battle at Lake Changjin
+Harry Potter and the Goblet of Fire :: 2005 | Goblet of Fire | Harry Potter 4
+The Lord of the Rings: The Fellowship of the Ring :: 2001 | The Fellowship of the Ring | Fellowship of the Ring | Lord of the Rings The Fellowship of the Ring | Lord of the Rings 1 | Lord of the Rings
+The Twilight Saga: Breaking Dawn - Part 2 :: 2012 | Breaking Dawn Part 2 | Twilight Breaking Dawn Part 2 | Breaking Dawn 2 | Twilight 5
+Spider-Man 3 :: 2007 | Spiderman 3
+Ice Age: Dawn of the Dinosaurs :: 2009 | Dawn of the Dinosaurs | Ice Age 3
+Harry Potter and the Chamber of Secrets :: 2002 | Chamber of Secrets | Harry Potter 2
+Spider-Man: Homecoming :: 2017 | Homecoming | Spiderman Homecoming
+Ice Age: Continental Drift :: 2012 | Continental Drift | Ice Age 4
+The Secret Life of Pets :: 2016 | Secret Life of Pets
+Batman v Superman: Dawn of Justice :: 2016 | Batman v Superman | Batman vs Superman | Batman versus Superman | Dawn of Justice
+Wolf Warrior 2 :: 2017
+The Hunger Games: Catching Fire :: 2013 | Catching Fire | Hunger Games Catching Fire | Hunger Games 2
